@@ -1,0 +1,10 @@
+# n1, n2, eL, index, fL for each boundary edge
+# n1, n2 = two nodes that define the edge
+# eL = element next to the boundary edge
+# index = boundary group index: farfield(1), main(2), slat(3), flap(4)
+# fL = local edge number in eL
+#      note: local edge f is opposite local node f
+1 2 1 1 3
+2 3 2 2 3
+3 4 2 3 1
+4 1 1 4 2

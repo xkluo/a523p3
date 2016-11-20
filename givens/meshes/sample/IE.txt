@@ -1,0 +1,6 @@
+# n1, n2, eL, eR, fL, fR for each interior edge
+# n1, n2 = two nodes that define the edge
+# eL, eR = element on left/right as we walk from n1 to n2
+# fL, fR = local edge numbers of this edge in each element
+#           note: local edge f is opposite local node f
+4 2 2 1 2 1
