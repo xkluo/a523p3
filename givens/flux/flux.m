@@ -22,6 +22,10 @@ vL = UL(3)/rL;
 unL = uL*n(1) + vL*n(2);
 qL = sqrt(UL(2)^2 + UL(3)^2)/rL;
 pL = (gamma-1)*(UL(4) - 0.5*rL*qL^2);
+if ((pL<=0) || (rL<=0))
+    pL
+    rL
+end
 if ((pL<=0) || (rL<=0)), error 'Non-physical state!', end;
 rHL = UL(4) + pL;
 HL = rHL/rL;
@@ -78,7 +82,7 @@ l(2) = ucp-ci;
 l(3) = ucp;
 
 % entropy fix
-epsilon = ci*.02;
+epsilon = ci*.1;
 for i=1:3,
   if ((l(i)<epsilon) && (l(i)>-epsilon)),
     l(i) = 0.5*(epsilon + l(i)*l(i)/epsilon);
